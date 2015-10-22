@@ -29,5 +29,12 @@ namespace DirectFromChef.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<ChefDetails> ChefDetails { get; set; }
+        public DbSet<ChefKind> ChefKinds { get; set; }
+
+        public DbSet<NoOfServices> NoOfServices { get; set; }
+
+        public DbSet<CuisinesModel> Cuisines { get; set; }
     }
 }
