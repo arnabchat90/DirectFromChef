@@ -151,7 +151,7 @@ namespace DirectFromChef.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , UserType = model.UserType };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -163,7 +163,15 @@ namespace DirectFromChef.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
                     Session["UserID"] = user.Id;
-                    return RedirectToAction("Index", "ChefDetails", new { id = user.Id });
+
+
+                    if (user.UserType == "Chef")
+                    {
+                        return RedirectToAction("Index", "ChefDetails", new { id = user.Id });
+                    }
+
+                    else
+                        return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }

@@ -65,6 +65,8 @@ namespace DirectFromChef.Models
     public class RegisterViewModel
     {
         [Required]
+        public string UserType { get; set; }
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

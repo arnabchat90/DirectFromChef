@@ -66,6 +66,12 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SendGrid.SmtpApi">
+      <HintPath>..\packages\SendGrid.SmtpApi.1.3.1\lib\net40\SendGrid.SmtpApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGridMail">
+      <HintPath>..\packages\Sendgrid.6.1.0\lib\SendGridMail.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -243,6 +249,10 @@
     <Compile Include="Migrations\201510241159072_AddedCookingDays.Designer.cs">
       <DependentUpon>201510241159072_AddedCookingDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510241355336_AddedUserType.cs" />
+    <Compile Include="Migrations\201510241355336_AddedUserType.Designer.cs">
+      <DependentUpon>201510241355336_AddedUserType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ChefDetails.cs" />
@@ -264,7 +274,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\chefIcon.png" />
+    <Content Include="Images\deliveryBoy.png" />
     <Content Include="Images\locateMe.png" />
+    <Content Include="Images\userIcon.png" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -282,6 +295,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\register.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -379,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510241159072_AddedCookingDays.resx">
       <DependentUpon>201510241159072_AddedCookingDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510241355336_AddedUserType.resx">
+      <DependentUpon>201510241355336_AddedUserType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
