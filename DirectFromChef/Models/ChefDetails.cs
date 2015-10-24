@@ -15,7 +15,50 @@ namespace DirectFromChef.Models
             _chefKinds = db.ChefKinds.ToList();
             NoOfServices = db.NoOfServices.ToList();
             Cuisines = db.Cuisines.ToList();
-            
+            CookingTimes = db.CookingTimes.ToList();
+            CookingDays = new List<CookingDays>(7);
+            CookingDays.Add(new CookingDays
+            {
+                Id = 1,
+                Name = "Monday",
+                Checked = false
+            });
+            CookingDays.Add(new CookingDays
+            {
+                Id = 2,
+                Name = "Tuesday",
+                Checked = false
+            });
+            CookingDays.Add(new CookingDays
+            {
+                Id = 3,
+                Name = "Wednesday",
+                Checked = false
+            });
+            CookingDays.Add(new CookingDays
+            {
+                Id = 4,
+                Name = "Thrusday",
+                Checked = false
+            });
+            CookingDays.Add(new CookingDays
+            {
+                Id = 5,
+                Name = "Friday",
+                Checked = false
+            });
+            CookingDays.Add(new CookingDays
+            {
+                Id = 6,
+                Name = "Saturday",
+                Checked = false
+            });
+            CookingDays.Add(new CookingDays
+            {
+                Id = 7,
+                Name = "Sunday",
+                Checked = false
+            });
             //NoOfServices.Add(1, "1 - 5");
             //NoOfServices.Add(2, "5 - 10");
             //NoOfServices.Add(3, "10 - 20");
@@ -57,10 +100,21 @@ namespace DirectFromChef.Models
         }
 
         [Required]
+        [Display(Name = "What times would you like to cook")]
+        public string CookingTimings { get; set; }
+
+        public virtual List<CookingTime> CookingTimes {get; set;}
+
+        [Required]
         [Display(Name="What Cuisines whould you like to prepare ?")]    
         public string AllCuisines { get; set; }
 
         public virtual List<CuisinesModel> Cuisines { get; set; }
+
+        [Required]
+        [Display(Name = "Which days of the week can you cook?")]    
+        public string CookingDaysSelected { get; set; }
+        public virtual List<CookingDays> CookingDays { get; set; }
 
 
         [Required]

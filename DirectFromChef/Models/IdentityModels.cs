@@ -36,5 +36,7 @@ namespace DirectFromChef.Models
         public DbSet<NoOfServices> NoOfServices { get; set; }
 
         public DbSet<CuisinesModel> Cuisines { get; set; }
+
+        public DbSet<CookingTime> CookingTimes { get; set; }
     }
 }

@@ -40,6 +40,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CaptchaMvc, Version=2.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CaptchaMvc.Mvc4.1.5.0\lib\net40-full\CaptchaMvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -219,16 +223,39 @@
     <Compile Include="Migrations\201510220733118_UpdatedCuisines.Designer.cs">
       <DependentUpon>201510220733118_UpdatedCuisines.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510230824041_AddedCookingTimes.cs" />
+    <Compile Include="Migrations\201510230824041_AddedCookingTimes.Designer.cs">
+      <DependentUpon>201510230824041_AddedCookingTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510230825169_UpdatedCookingTime.cs" />
+    <Compile Include="Migrations\201510230825169_UpdatedCookingTime.Designer.cs">
+      <DependentUpon>201510230825169_UpdatedCookingTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510241112583_ChangeInCookingTimes.cs" />
+    <Compile Include="Migrations\201510241112583_ChangeInCookingTimes.Designer.cs">
+      <DependentUpon>201510241112583_ChangeInCookingTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510241134486_UpdateChefDetails.cs" />
+    <Compile Include="Migrations\201510241134486_UpdateChefDetails.Designer.cs">
+      <DependentUpon>201510241134486_UpdateChefDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510241159072_AddedCookingDays.cs" />
+    <Compile Include="Migrations\201510241159072_AddedCookingDays.Designer.cs">
+      <DependentUpon>201510241159072_AddedCookingDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ChefDetails.cs" />
     <Compile Include="Models\ChefKind.cs" />
+    <Compile Include="Models\CookingDays.cs" />
+    <Compile Include="Models\CookingTime.cs" />
     <Compile Include="Models\CuisinesModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NoOfServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\DayOfWeek.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -337,6 +364,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510220733118_UpdatedCuisines.resx">
       <DependentUpon>201510220733118_UpdatedCuisines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510230824041_AddedCookingTimes.resx">
+      <DependentUpon>201510230824041_AddedCookingTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510230825169_UpdatedCookingTime.resx">
+      <DependentUpon>201510230825169_UpdatedCookingTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510241112583_ChangeInCookingTimes.resx">
+      <DependentUpon>201510241112583_ChangeInCookingTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510241134486_UpdateChefDetails.resx">
+      <DependentUpon>201510241134486_UpdateChefDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510241159072_AddedCookingDays.resx">
+      <DependentUpon>201510241159072_AddedCookingDays.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
